@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "content": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "author": {
+      "type": "string",
+      "default": "admin",
+      "required": true,
+      "unique": true,
+      "maxLength": 20
+    },
+    "commnets": {
+      "type": "integer",
+      "default": 0
+    },
+    "created": {
+      "type": "date"
+    },
+    "cover": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
+    }
+  }
+}
